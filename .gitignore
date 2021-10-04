@@ -1,1 +1,4 @@
+build-*
 *.user
+.directory
+__DEV*
