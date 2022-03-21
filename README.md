@@ -1,5 +1,5 @@
-# eorm
-Concept of one-header ORM for C++
+# compilable SQL
+Concept of SQL-like syntax for C++
 
 # 1. Table declaration
 looks like common C-like structure:
