@@ -1,6 +1,10 @@
 # compilable SQL
 Concept of SQL-like syntax for C++
 
+# 0. Usage
+Currently supports generation of raw sql requests and SQLite database.
+Examples of raw sql generation you can see [here](https://github.com/R3D9477/csql/blob/main/orm/lib/eorm/test/test_eorm.cpp) and working with SQLite database you can see [here](https://github.com/R3D9477/csql/blob/main/orm/lib/eorm_sqlite/test/test_eorm_sqlite.cpp).
+
 # 1. Table declaration
 looks like common C-like structure:
 ```
