@@ -1,7 +1,7 @@
 # Compilable SQL
-Concept of SQL genration using common C++ syntax and power of compiler's data types checking.
+Concept of SQL generation using common C++ syntax and power of compiler's data types checking.
 
-# 1. Create a table
+## 1. Create a table
 
 The given table with 6 columns
 ```
@@ -30,7 +30,7 @@ CREATE TABLE Table1
 );
 ```
 
-This sql request can be generated with given C++ snippet:
+This SQL request can be generated with given C++ snippet:
 1. Declate table as a reqular structure:
 ```
 struct Table1: Table
@@ -51,9 +51,7 @@ Table1 table1;
 std::string sql = table1.getSqlTableCreate();
 ```
 
----
-
-# 2. Data row insertion
+## 2. Data row insertion
 
 To add two rows with given values:
 ```
@@ -79,9 +77,7 @@ std::string sql = Table1.getSqlRowsInsert();
 ```
 The compiler will check, that data passed in `addRow` fits data types of appopriate columns (fields of `Table1` structure).
 
----
-
-# 3. Conditions
+## 3. Conditions
 
 To select some specific data needed given SQL:
 ```
@@ -106,10 +102,15 @@ std::cout << table1.getSqlRowsSelect
 ```
 It has a common C-like style with values data type checking and nesting conditions support.
 
-# 4. CSQL SQLite
+## 4. CSQL SQLite
 
-There is library CSQL-SQLite that manages data in SQLite database instread of generation strings for SQL.
+There is library CSQL-SQLite that manages data in SQLite database.
+Example of using can be found in tests of `libcsql-sqlite` and in demo `src/main.cpp`.
 
-# 5. Examples
+## 5. Links
 
-More examples can be found in `src/main.cpp` (usage of `SQLite3`) and tests of both of the libraries `libcsql` and `libcsql-sqlite`.
+* More examples can be found:
+  * in demo `src/main.cpp` (usage of `SQLite3`) 
+  * in tests of both of the libraries `libcsql` and `libcsql-sqlite`.
+
+* Project uses [CppProjectTemplate_VSCodeCMakeTools](https://github.com/R3D9477/CppProjectTemplate_VSCodeCMakeTools)
