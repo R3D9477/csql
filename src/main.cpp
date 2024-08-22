@@ -21,25 +21,6 @@ struct MyTableInfo : SqliteTable
     }
 };
 
-struct MyTableInfo1 : Table
-{
-    TableColumn<int> ID{{"ID"}, TCS(TCS::PRIMARY_KEY | TCS::AUTOINCREMENT)};
-    TableColumn<double> C1{{"C1"}, TCS::DEFAULT, 3.14};
-    TableColumn<std::time_t> C2{{"C2"}, TCS(TCS::DEFAULT | TCS::NOT_NULL)};
-    TableColumn<std::string> C3{TCS::DEFAULT};
-    TableColumn<float> C4{5.65f};
-    TableColumn<float> C5;
-
-    MyTableInfo1() : Table({"MyTable"})
-    {
-        registerColumns(ID, C1, C2, C3, C4, C5);
-    }
-};
-
-/**
- * @brief main is the 'entry point' of BULK application.
- * @return result of application execution, non-zero value is code of the error.
- */
 int main()
 {
     SqliteDatabase db{"my.db"};
