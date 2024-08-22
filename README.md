@@ -5,15 +5,15 @@ Concept of SQL generation using common C++ syntax and power of compiler's data t
 
 The given table with 6 columns
 ```
-[ ID | C1 | C2 | C3 | C4 | C5 | C6 ]
-[----|----|----|----|----|----|----]
+[ ID | C1 | C2 | C3 | C4 | C5 ]
+[----|----|----|----|----|----]
 ```
 
 Where:
 * `ID` - it is unique autoicremented row IDs (`PRIMARY_KEY`, `AUTOINCREMENT`)
 * `C1` - floating point data with defaul value `3.14`
 * `C2` - timestamp with non-null values
-* `C3` - string
+* `C3` - string with default value "" (empty string)
 * `C4` - floating point rows with default value `5.65`
 * `C5` - floating point rows without any extra parameters
 
@@ -24,9 +24,9 @@ CREATE TABLE Table1
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     C1 REAL DEFAULT 3.140000,
     C2 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    COLUMN_3 TEXT DEFAULT '',
-    COLUMN_4 REAL DEFAULT 5.650000,
-    COLUMN_5 REAL
+    C3 TEXT DEFAULT '',
+    C4 REAL DEFAULT 5.650000,
+    C5 REAL
 );
 ```
 
