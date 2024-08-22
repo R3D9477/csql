@@ -1,4 +1,6 @@
-build-*
-*.user
+*.user 
 .directory
-__DEV*
+_*
+build
+__pycache__
+.vscode/liveprocmon/generated/*
